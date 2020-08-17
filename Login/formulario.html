@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Formulario html</title>
+</head>
+<br>
+<br>
+<body>
+
+<form action="<?php echo $_SERVER['PHP_SELF']; ?> " method="$_POST">
+		<table><tr><td>
+		Usuario: <input type="text" name="usuario" ></td></tr><tr><td>
+		Password: <input type="password" name="password">
+		<input type="submit" name="enviar" value="Ingresar"></td></tr>
+	</table>
+	</form>
+</body>
+</html>
