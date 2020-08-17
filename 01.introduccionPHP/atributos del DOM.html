@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset = "UTF-8">
+	<title>documentos del dom</title>
+		<h1>Documentos del DOM</h1>
+	<style>
+	div {
+		width: 200px;
+		height:200px;
+		background:#ddd;
+		display: inline-block;
+		margin-right: 10px;
+		border: 1px solid #aaa;
+	}
+	
+	.azul {
+		background: #007409;
+		border: 1px solid #aaa;
+	}
+	.rojo {
+		background: black;
+		border: 1px solid #000;
+	}
+</style>
+</head>
+<button id="boton">Boton</button>
+<input type="text" id="input">
+<script>
+var saludo = function(){
+	console.log("saludo");
+};
+
+var boton = document.getElementById("boton");
+boton.addEventListener("click", saludo);
+//boton.addEventListener("click", saludo);
+//se usa para remover eventos existentes
+ var input = document.getElementById("input");
+input.addEventListener("focus", saludo);
+
+</script>>
+<body>
+<code>Texto en formato CODE</code>
+<section id="contenedor">
+	<a href="http://www.google.com" id="enlace">ir a google</a>
+	<div class="azul"></div>
+	<div class="rojo"></div>
+</section>
+</script>
+<script>
+	//setAttribute (nombre y valor) es para cambiar atributos vigentes
+    var elemento = document.createElement("div");
+	var padre = document.getElementById("contenedor");
+	var referencia = document.getElementsByTagName("div")[0];
+	elemento.setAttribute("class", "azul");
+	padre.insertBefore(elemento, referencia);
+	//con la etiqueta <pre> se puede escribir textualmente en el navegador como tambien en el codigo
+</script>
+
+</body>
+</html>

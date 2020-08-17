@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset = "UTF-8">
+	<title>atributos del DOM</title>
+	</head>
+<body>
+	
+	<h1 id="titulo">Atributos del DOM</h1>
+	
+	<div id="subtitulo">subtitulo</div>
+	
+	<form>
+		<input type="text" id="num1">
+		<input type="text" id="num2">
+		<input type="button" value="sumar" onclick="alert(suma(10, 20) );">
+	</form>
+	<p id="Segundo">El 19 de Diciembre del 2001 asesinaban a Pocho Lepratti "El ángel de la bicicleta".... Ojalá todos viralicen su recuerdo eterno y memoricen su último grito: "Bajen las armas, aquí sólo hay pibes comiendo!!!!"</p>
+
+	<p>El 19 de Diciembre del 2001 asesinaban a Pocho Lepratti "El ángel de la bicicleta".... Ojalá todos viralicen su recuerdo eterno y memoricen su último grito: "Bajen las armas, aquí sólo hay pibes comiendo!!!!"</p>
+<script>
+	var elementosP = document.getElementsByTagName("p");
+	var idSegundo = document.getElementById("Segundo");
+
+	//Utilizamos la función getElement() de Mootools para seleccionar un elemento de la página web, que luego podremos alterar para cambiar sus propiedades con otros métodos de Element.
+</script>
+
+<script>
+	//1. crear elemento
+	var elemento = document.createElement("h2");
+	//2. crear nodo de texto
+	var contenido = document.createTextNode("este es nuestro titular");
+	//añadir el nodo de texto al elemento
+	elemento.appendChild(contenido);
+	//4. agregar atributos al elemento
+	elemento.setAttribute("align", "center"); //entre parentesis asignamos nombre y valor
+	//5. agregar el elemento al documento
+	document.getElementById("subtitulo").appendChild(elemento);
+
+</script>
+
+	<script>
+		var texto = "calculadora";
+		var nuevoTexto = texto.toUpperCase();
+		var nuevoTexto = texto.length;
+		document.write(nuevoTexto);
+
+		var texto2 = "calculadora";
+		var nuevoTexto2 = texto.toLowerCase();
+		var nuevoTexto2 = texto.length;
+		document.write(nuevoTexto2);
+	</script>
+<script>
+	var suma = function(num1, num2){
+	var num1 = parseFloat(document.getElementById("num1").value);	
+	var num2 = parseFloat(document.getElementById("num2").value);
+	var resultado = num1 + num2;
+	return resultado;
+	}
+</script>
+
+
+<script type="text/javascript">
+var num1 = parseInt(prompt("Primer número"));
+var num2 = prompt("Segundo número");
+var res = num1 + parseInt(num2);
+
+document.write(res);
+</script>
+<br>
+<br>
+<script>
+var numeromaximo = function (val1, val2){
+	if (val1 > val2){
+		return val1;
+	}
+	return val2;
+}
+
+document.write("el numero maximo es: " + numeromaximo(1,7));
+</script>
+
+<script>
+
+(function(){
+var variableGlobal = "esta es variable global";
+var mifuncion = function(){
+	//var variableLocal = "esta es variable local";
+	alert(variableLocal);
+
+	var funcionLocal = function(){
+		var variableLocal = "esta es variable local dentro de funcion local";
+			alert(variableLocal);
+	}
+	
+	funcionLocal();
+}
+mifuncion();
+}())
+
+</script>
+
+<ol id="lista">
+	<li id ="primero">lista primer <b>ítem</b></li>
+	<li>lista segundo <b>item</b></li>
+</ol>
+<script>
+	//remplazar texto de una lista
+	var primerElemento = document.getElementById("primero");
+	primerElemento.innerHTML = "nuevo texto";
+</script>
+<script>
+	//reemplazar nodos del DOM
+	var elemento = document.createElement("li");
+	contenido = document.createElement("nuevo texto");
+
+	elemento appendChild(contenido);
+
+	var padre = document.getElementsByTagName("li")[0].parentNode;
+	 var referencia = document.getElementsByTagName("li")[0].parentNode;
+	 padre.replaceChild(elemento, referencia);
+</script>
+<script>
+//eliminar nodos de DOM
+var padre = document.getElementsByTagName("li")[0].parentNode;
+var referencia = document.getElementsByTagName("li")[0];
+padre.removeChild(referencia);
+</script>
+</style>
+</body>
+</html>
