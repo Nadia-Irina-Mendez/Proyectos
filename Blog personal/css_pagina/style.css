@@ -1,0 +1,23 @@
+.head{
+	margin-top: 50 px;
+	background color: #f2f2f2;
+}
+.headcontent{
+	padding: 25 px;
+}
+.img-head{
+	width: 150 px;
+	position: absolute;
+	top: 0;
+	left: 80%;
+
+}
+@media (max-widht: 760 px){
+	.img-head{
+		position: relative;
+		left: 35%;
+	}
+	.head-content{
+		text-align: center;
+	}
+}
